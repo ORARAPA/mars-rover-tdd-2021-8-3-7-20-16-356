@@ -18,6 +18,10 @@ public class MarsRover {
         this.roverStatus = roverStatus;
     }
 
+    public String buildReport(RoverStatus roverStatus){
+        return null;
+    }
+
     public void parseInstructions(String instructions){
         String[] instruction = instructions.split("  ");
         commands = instruction[1];
@@ -99,4 +103,6 @@ public class MarsRover {
     public String getCommands() {
         return this.commands;
     }
+
+
 }
