@@ -1,7 +1,10 @@
 package com.afs.tdd;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class MarsRover {
     private RoverStatus roverStatus;
@@ -16,7 +19,13 @@ public class MarsRover {
     }
 
     public void parseInstructions(String instructions){
+        String[] instruction = instructions.split("  ");
+        commands = instruction[1];
+
+        String[] initialValues = instruction[0].split(" ");
+        roverStatus = new RoverStatus(Integer.parseInt(initialValues[0]),Integer.parseInt(initialValues[1]),initialValues[2]);
     }
+
 
     public RoverStatus executeCommands(RoverStatus roverStatus, String command){
         this.roverStatus = roverStatus;
