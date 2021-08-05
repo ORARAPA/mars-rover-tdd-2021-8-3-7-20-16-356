@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class MarsRover {
     private RoverStatus roverStatus;
+    private String commands = "";
 
     public MarsRover() {
 
@@ -12,6 +13,9 @@ public class MarsRover {
 
     public MarsRover(RoverStatus roverStatus) {
         this.roverStatus = roverStatus;
+    }
+
+    public void parseInstructions(String instructions){
     }
 
     public RoverStatus executeCommands(RoverStatus roverStatus, String command){
@@ -81,5 +85,9 @@ public class MarsRover {
 
     public RoverStatus getRoverStatus() {
         return roverStatus;
+    }
+
+    public String getCommands() {
+        return this.commands;
     }
 }
