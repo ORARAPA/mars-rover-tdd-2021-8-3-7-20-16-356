@@ -169,4 +169,6 @@ class MarsRoverTest {
         assertEquals(expectedRoverStatus.getLocationY(),marsRover.getRoverStatus().getLocationY());
         assertEquals(expectedRoverStatus.getDirection(),marsRover.getRoverStatus().getDirection());
     }
+
+
 }
