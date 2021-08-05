@@ -19,7 +19,9 @@ public class MarsRover {
     }
 
     public String executeInstructions(String instructions){
-        return null;
+        parseInstructions(instructions);
+        executeCommands(roverStatus,commands);
+        return buildReport(roverStatus);
     }
 
     public String buildReport(RoverStatus roverStatus){
