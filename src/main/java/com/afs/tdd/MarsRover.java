@@ -1,5 +1,8 @@
 package com.afs.tdd;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class MarsRover {
     private RoverStatus roverStatus;
 
@@ -8,15 +11,20 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        if(command.equals("M")){
-            move();
+        String commands[] = command.split("");
+
+        for (int i = 0; i < commands.length ; i++) {
+            if(commands[i].equals("M")){
+                move();
+            }
+            if(commands[i].equals("L")){
+                turnLeft();
+            }
+            if(commands[i].equals("R")){
+                turnRight();
+            }
         }
-        if(command.equals("L")){
-            turnLeft();
-        }
-        if(command.equals("R")){
-            turnRight();
-        }
+
     }
 
     private void turnRight() {
