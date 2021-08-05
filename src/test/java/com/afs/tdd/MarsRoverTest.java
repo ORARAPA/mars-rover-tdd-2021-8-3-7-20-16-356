@@ -247,4 +247,18 @@ class MarsRoverTest {
         //then
         assertEquals(expected,result);
     }
+
+    @Test
+    void should_return_string_n1_1_N_when_execute_instructions_given_string_0_0_N_MLMR() {
+        //given
+        MarsRover marsRover = new MarsRover();
+        String instructions = "0 0 N  MLMR";
+        String expected = "-1 1 N";
+
+        //when
+        String result = marsRover.executeInstructions(instructions);
+
+        //then
+        assertEquals(expected,result);
+    }
 }

@@ -18,6 +18,10 @@ public class MarsRover {
         this.roverStatus = roverStatus;
     }
 
+    public String executeInstructions(String instructions){
+        return null;
+    }
+
     public String buildReport(RoverStatus roverStatus){
         return String.format("%d %d %s",roverStatus.getLocationX(),roverStatus.getLocationY(),roverStatus.getDirection());
     }
