@@ -235,18 +235,16 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_return_roverStatus_locationX_n1_locationY_1_direction_N_when_build_report_given_0_0_N_MMMM() {
+    void should_return_string_n1_1_N_when_build_report_given_locationX_0_locationY_0_direction_N() {
         //given
         MarsRover marsRover = new MarsRover();
         RoverStatus inputRoverStatus = new RoverStatus(0,0,"N");
-        RoverStatus expectedRoverStatus = new RoverStatus(-1,1,"N");
+        String expected = "0 0 N";
 
         //when
-        marsRover.buildReport(inputRoverStatus);
+        String result = marsRover.buildReport(inputRoverStatus);
 
         //then
-        assertEquals(expectedRoverStatus.getLocationX(),marsRover.getRoverStatus().getLocationX());
-        assertEquals(expectedRoverStatus.getLocationY(),marsRover.getRoverStatus().getLocationY());
-        assertEquals(expectedRoverStatus.getDirection(),marsRover.getRoverStatus().getDirection());
+        assertEquals(expected,result);
     }
 }
