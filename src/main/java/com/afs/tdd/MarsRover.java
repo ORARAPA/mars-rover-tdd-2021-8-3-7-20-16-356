@@ -19,7 +19,7 @@ public class MarsRover {
     }
 
     public String buildReport(RoverStatus roverStatus){
-        return null;
+        return String.format("%d %d %s",roverStatus.getLocationX(),roverStatus.getLocationY(),roverStatus.getDirection());
     }
 
     public void parseInstructions(String instructions){
