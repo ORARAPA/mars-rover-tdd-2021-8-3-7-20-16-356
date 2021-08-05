@@ -6,8 +6,18 @@ import java.util.Arrays;
 public class MarsRover {
     private RoverStatus roverStatus;
 
+    public MarsRover() {
+
+    }
+
     public MarsRover(RoverStatus roverStatus) {
         this.roverStatus = roverStatus;
+    }
+
+    public void executeCommands(RoverStatus roverStatus, String command){
+        this.roverStatus = roverStatus;
+        executeCommand(command);
+
     }
 
     public void executeCommand(String command) {
