@@ -14,10 +14,11 @@ public class MarsRover {
         this.roverStatus = roverStatus;
     }
 
-    public void executeCommands(RoverStatus roverStatus, String command){
+    public RoverStatus executeCommands(RoverStatus roverStatus, String command){
         this.roverStatus = roverStatus;
         executeCommand(command);
 
+        return this.roverStatus;
     }
 
     public void executeCommand(String command) {
